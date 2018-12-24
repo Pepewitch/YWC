@@ -1,3 +1,32 @@
+.main_container{
+    height: 150px;
+}
 .container{
-    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center;
+}
+.layout_text{
+    text-align: end;
+    display: flex;
+    flex-flow: column-reverse;
+}
+.footer{
+   text-align: center;
+    background-color:blue ;
+    color: white
+}
+p{
+    margin: 0
+}
+.contractus{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between
+}
+.buttonfooter{
+    display: flex;
+    flex-flow: row;
+    justify-content: center
 }
