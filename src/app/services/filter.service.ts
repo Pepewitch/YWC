@@ -30,8 +30,37 @@ export class FilterService {
     night: false,
   };
   location = '';
-  camera;
+  camera = '';
   constructor() {}
+  clear() {
+    this.type = {
+      portrait: false,
+      landscape: false,
+    };
+    this.mood = {
+      happy: false,
+      sad: false,
+      cloudy: false,
+      rainy: false,
+      snowy: false,
+      lonely: false,
+    };
+    this.tone = {
+      warm: false,
+      cool: false,
+      bw: false,
+      contrast: false,
+      saturate: false,
+      film: false,
+      street: false,
+    };
+    this.time = {
+      day: false,
+      night: false,
+    };
+    this.location = '';
+    this.camera = '';
+  }
   setFilter(type, mood, tone, camera, time) {
     for (const key in type) {
       if (type.hasOwnProperty(key)) {

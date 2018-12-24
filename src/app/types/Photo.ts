@@ -1,11 +1,12 @@
-export type Tone = 'warm' | 'cool';
+export type Tone = 'warm' | 'cool' | 'bw' | 'contrast' | 'saturate' | 'film' | 'street';
 
-export type Mood = 'happy' | 'sad' | 'rainy';
+export type Mood = 'happy' | 'sad' | 'rainy' | 'lonely' | 'snowy' |'cloudy';
 
 export interface DetailPhotoParams {
     photo: string;
 }
 
+export type Time = 'day' | 'night';
 export interface DetailPhoto {
     id: string;
     extension: 'jpg'|'jpeg'|'png';
@@ -13,6 +14,7 @@ export interface DetailPhoto {
     tone: Tone[];
     type: 'Portrait' | 'Landscape';
     mood: Mood[];
+    time: Time;
     setting: Setting;
     like: number;
     view: number;

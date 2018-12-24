@@ -12,8 +12,8 @@ export class NavigationBarService {
       pathMatch: true
     },
     {
-      name: 'Detail',
-      link: '/detail/1',
+      name: 'Gallery',
+      link: '/search',
       pathMatch: false
     }
   ];
