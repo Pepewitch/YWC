@@ -16,11 +16,24 @@
 .layout-img{
     display: flex;
     flex-flow: column wrap;
-    padding: 5px
+    padding: 5px;
+    margin: 5px;
+    background-color:white 
 }
 .layou-label{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 5px
+}
+.box{
+    border:1px solid yellow;
+    width: 500px;
+    margin: 0 10px 0 10px;
+    padding: 0 10px 0 10px
+}
+.left-box{
+    border:1px solid yellow;
+    margin: 0 10px 0 10px;
+    padding: 0 10px 0 10px
 }
