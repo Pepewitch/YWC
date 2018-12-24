@@ -1,3 +1,4 @@
+
 .container{
     display: flex;
     flex-flow: column;
@@ -5,10 +6,15 @@
     justify-content: center;
     align-self: center;
     padding: 20px;
-    
 }
-.filter{
-    background-color: #ffb401;
-    height: 85px;
-    width: 70%;
+.filter {
+  background-color: #ffb401;
+  height: 85px;
+  width: 70%;
+}
+.header-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1), rgba(0,0,0,0));
 }

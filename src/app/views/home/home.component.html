@@ -1,13 +1,18 @@
-<div style="padding: 8px">
-  <div class="container">
+<div class="flex-col-nowrap" style="align-items: center;">
+  <img src="/assets/images/header.jpg" class="header-image" (click)="openFilterDialog()"/>
+  <div class="main-container">
+    <div style="padding: 8px">
+      <!-- <div class="container">
     <h1>ทางลัดที่ง่ายสุด</h1>
     <h1>สำหรับมือใหม่ เล่นกล้อง</h1>
     <button mat-raised-button (click)="openFilterDialog()">Filter</button>
     <hr>
-  </div>
-  <div>
-    <app-location></app-location>
-    <app-interesting></app-interesting>
-    <app-footer></app-footer>
+  </div> -->
+      <div>
+        <app-location></app-location>
+        <app-interesting></app-interesting>
+        <app-footer></app-footer>
+      </div>
+    </div>
   </div>
 </div>
