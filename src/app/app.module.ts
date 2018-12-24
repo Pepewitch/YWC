@@ -15,6 +15,7 @@ import { NavigationSidenavItemComponent } from './components/navigation-bar/navi
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { DetailPhotoComponent } from './views/detail-photo/detail-photo.component';
+import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,10 @@ import { DetailPhotoComponent } from './views/detail-photo/detail-photo.componen
     NavigationSidenavContentComponent,
     NavigationSidenavItemComponent,
     DetailPhotoComponent,
+    FilterDialogComponent,
   ],
   entryComponents: [
+    FilterDialogComponent
   ],
   imports: [
     BrowserModule,
