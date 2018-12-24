@@ -1,11 +1,12 @@
 .main_container{
     height: 150px;
+    background-color: white;
 }
 .container{
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-self: center;
+    flex-flow: row;
+    padding: 10px
+   
 }
 .layout_text{
     text-align: end;

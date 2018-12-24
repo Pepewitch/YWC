@@ -1,10 +1,11 @@
-.container {
-  display: flex;
-  flex-flow: column;
-  height: 425px;
-  justify-content: center;
-  align-self: center;
-  padding: 20px;
+
+.container{
+    display: flex;
+    flex-flow: column;
+    height: 425px;
+    justify-content: center;
+    align-self: center;
+    padding: 20px;
 }
 .filter {
   background-color: #ffb401;
