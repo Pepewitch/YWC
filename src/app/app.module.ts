@@ -19,6 +19,7 @@ import { DetailPhotoComponent } from './views/detail-photo/detail-photo.componen
 import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.component';
 import { InterestingComponent } from './components/interesting/interesting.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SearchComponent } from './views/search/search.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FilterDialogComponent,
     InterestingComponent,
     FooterComponent,
+    SearchComponent,
   ],
   entryComponents: [
     FilterDialogComponent

@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { FilterService } from 'src/app/services/filter.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-filter-dialog',
@@ -13,6 +14,8 @@ export class FilterDialogComponent implements OnInit {
   portrait = false;
   isMobile = false;
   camera = '';
+  day = false;
+  night = false;
   mood = {
     happy: false,
     sad: false,
@@ -35,6 +38,7 @@ export class FilterDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data,
     breakpointObserver: BreakpointObserver,
     private filter: FilterService,
+    private router: Router,
   ) {
     breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.isMobile = result.matches;
@@ -70,6 +74,12 @@ export class FilterDialogComponent implements OnInit {
       this.mood,
       this.tone,
       this.camera,
+      {
+        day: this.day,
+        night: this.night
+      }
     );
+    this.router.navigate(['search']);
+    this.onNoClick();
   }
 }

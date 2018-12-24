@@ -25,9 +25,14 @@ export class FilterService {
     film: false,
     street: false,
   };
+  time = {
+    day: false,
+    night: false,
+  };
+  location = '';
   camera;
   constructor() {}
-  setFilter(type, mood, tone, camera) {
+  setFilter(type, mood, tone, camera, time) {
     for (const key in type) {
       if (type.hasOwnProperty(key)) {
         const element = type[key];
@@ -44,6 +49,12 @@ export class FilterService {
       if (tone.hasOwnProperty(key)) {
         const element = tone[key];
         this.tone[key] = element;
+      }
+    }
+    for (const key in time) {
+      if (time.hasOwnProperty(key)) {
+        const element = time[key];
+        this.time[key] = element;
       }
     }
     this.camera = camera;
