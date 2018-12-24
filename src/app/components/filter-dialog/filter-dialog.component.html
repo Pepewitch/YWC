@@ -1,4 +1,7 @@
 <div class="flex-col-nowrap container">
+  <div class="flex-row-nowrap" style="justify-content: flex-end">
+    <button mat-icon-button (click)="onNoClick()"><mat-icon svgIcon="clear"></mat-icon></button>
+  </div>
   <div class="flex-row-nowrap header-container">
     <mat-icon svgIcon="location"></mat-icon>
     ค้นหาสถานที่ต้องการ
@@ -6,7 +9,7 @@
   <mat-divider style="align-self: stretch"></mat-divider>
   <div class="body-container">
     <div class="flex-row-nowrap" style="justify-content: flex-end">
-      <mat-checkbox>เลือกทั้งหมด</mat-checkbox>
+      <mat-checkbox (change)="selectAll($event)">เลือกทั้งหมด</mat-checkbox>
     </div>
     <table>
       <tr>
@@ -87,7 +90,7 @@
         <td><label class="topic">กล้อง</label></td>
         <td>
           <mat-form-field style="width: 100%">
-            <mat-select>
+            <mat-select [(ngModel)]="camera">
               <mat-option [value]="'canon'"> canon </mat-option>
             </mat-select>
           </mat-form-field>
@@ -97,5 +100,193 @@
 
     <label class="topic">MOOD</label>
     <mat-divider></mat-divider>
+    <div class="flex-row-wrap">
+      <div class="relative-container">
+        <div class="icon" *ngIf="mood.happy">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/happy.jpg"
+          (click)="mood.happy = !mood.happy"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>HAPPY</span> <span>(มีความสุข)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="mood.sad">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/sad.jpg"
+          (click)="mood.sad = !mood.sad"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>SAD</span> <span>(เศร้า)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="mood.cloudy">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/cloudy.jpg"
+          (click)="mood.cloudy = !mood.cloudy"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>CLOUDY</span> <span>(ฟ้าครึ้ม)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="mood.rainy">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/rainny.jpg"
+          (click)="mood.rainy = !mood.rainy"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>RAINY</span> <span>(ฝนตก)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="mood.snowy">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/snowy.jpg"
+          (click)="mood.snowy = !mood.snowy"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>SNOWY</span> <span>(หนาวเย็น)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="mood.lonely">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/lonely.jpg"
+          (click)="mood.lonely = !mood.lonely"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>LONELY</span> <span>(โดดเดี่ยว)</span>
+        </div>
+      </div>
+    </div>
+    <label class="topic">TONE</label>
+    <mat-divider></mat-divider>
+    <div class="flex-row-wrap">
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.warm">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/warm.jpg"
+          (click)="tone.warm = !tone.warm"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>WARM</span> <span>(อบอุ่น)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.cool">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/cool.png"
+          (click)="tone.cool = !tone.cool"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>COOL</span> <span>(เย็น)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.bw">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/B_W.jpg"
+          (click)="tone.bw = !tone.bw"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>B&W</span> <span>(ขาวดำ)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.contrast">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/contrast.jpg"
+          (click)="tone.contrast = !tone.contrast"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>CONTRAST</span> <span>(แตกต่าง)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.saturate">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/saturate.jpg"
+          (click)="tone.saturate = !tone.saturate"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>SATURATE</span> <span>(สีสด)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.film">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/film.jpg"
+          (click)="tone.film = !tone.film"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>FILM</span> <span>(ฟิล์ม)</span>
+        </div>
+      </div>
+      <div class="relative-container">
+        <div class="icon" *ngIf="tone.street">
+          <mat-icon svgIcon="checked" style="transform: scale(0.8)"></mat-icon>
+        </div>
+        <img
+          class="image"
+          src="/assets/filter/street.jpg"
+          (click)="tone.street = !tone.street"
+        />
+        <div class="flex-col-nowrap" style="align-items:center">
+          <span>STREET</span> <span>(สตรีท)</span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex-row-nowrap"
+      style="justify-content:center;padding-top:16px;"
+    >
+      <button
+        mat-raised-button
+        color="primary"
+        style="font-weight:600;width:100%;"
+        (click)="search()"
+      >
+        ค้นหา
+      </button>
+    </div>
   </div>
 </div>

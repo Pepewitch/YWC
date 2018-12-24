@@ -32,3 +32,10 @@
   flex-basis: 160px;
   font-weight: 600;
 }
+
+.image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    cursor: pointer;
+}

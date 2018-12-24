@@ -104,5 +104,6 @@ body {
 }
 
 .full-width-dialog {
-  max-width: 100vw !important;
+  max-width: 80vw !important;
+  overflow: auto;
 }
