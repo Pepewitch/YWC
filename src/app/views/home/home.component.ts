@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
   constructor(private title: Title, public dialog: MatDialog) {}
 
   ngOnInit() {
-    this.title.setTitle('YWC');
   }
   openFilterDialog() {
     const dialogRef = this.dialog.open(FilterDialogComponent, {
