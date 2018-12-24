@@ -47,7 +47,7 @@
   </table>
 </div>
 <div class="flex-row-wrap">
-  <div class="each-image" *ngFor="let photo of images">
+  <div class="each-image" *ngFor="let photo of images" style="cursor: pointer;" (click)="toDetail(photo)">
     <img [src]="'/assets/images/photo/' + photo.id + '.' + photo.extension" class="image">
   </div>
 </div>

@@ -15,6 +15,11 @@ export class NavigationBarService {
       name: 'Gallery',
       link: '/search',
       pathMatch: false
+    },
+    {
+      name: 'Article',
+      link: '/article',
+      pathMatch: false
     }
   ];
   constructor() { }

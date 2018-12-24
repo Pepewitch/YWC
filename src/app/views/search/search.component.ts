@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     let filterString = '';
+    const f = { mood: '', tone: '', type: '', time: '', loc: '', camera: '' };
     for (const key in this.filter.mood) {
       if (this.filter.mood.hasOwnProperty(key)) {
         if (this.filter.mood[key]) {
@@ -34,6 +35,8 @@ export class SearchComponent implements OnInit {
         }
       }
     }
+    f.mood = filterString;
+    filterString = '';
     for (const key in this.filter.tone) {
       if (this.filter.tone.hasOwnProperty(key)) {
         if (this.filter.tone[key]) {
@@ -43,6 +46,8 @@ export class SearchComponent implements OnInit {
         }
       }
     }
+    f.tone = filterString;
+    filterString = '';
     for (const key in this.filter.type) {
       if (this.filter.type.hasOwnProperty(key)) {
         if (this.filter.type[key]) {
@@ -52,6 +57,8 @@ export class SearchComponent implements OnInit {
         }
       }
     }
+    f.type = filterString;
+    filterString = '';
     for (const key in this.filter.time) {
       if (this.filter.time.hasOwnProperty(key)) {
         if (this.filter.time[key]) {
@@ -61,16 +68,23 @@ export class SearchComponent implements OnInit {
         }
       }
     }
+    f.time = filterString;
+    filterString = '';
     this.camera = this.filter.camera;
     if (this.camera) {
       filterString += this.camera + '//';
     }
+    f.camera = filterString;
+    filterString = '';
     this.loc = this.filter.location;
     if (this.loc) {
       filterString += this.loc + '//';
     }
-    console.log(filterString);
-    this.images = this.detail.getPhotoByFilter(filterString);
-    console.log(this.images);
+    f.loc = filterString;
+    filterString = '';
+    this.images = this.detail.getPhotoByFilter(f);
+  }
+  toDetail(photo) {
+    this.router.navigate(['detail', photo.id]);
   }
 }

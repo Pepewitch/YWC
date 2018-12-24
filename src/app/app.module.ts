@@ -20,6 +20,8 @@ import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.
 import { InterestingComponent } from './components/interesting/interesting.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './views/search/search.component';
+import { ArticleComponent } from './views/article/article.component';
+import { ArticleContentComponent } from './views/article/article-content/article-content.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { SearchComponent } from './views/search/search.component';
     InterestingComponent,
     FooterComponent,
     SearchComponent,
+    ArticleComponent,
+    ArticleContentComponent,
   ],
   entryComponents: [
     FilterDialogComponent

@@ -103,6 +103,19 @@ body {
   padding: 4px;
 }
 
+.sad-tag {
+  background-color: #E57373;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.contrast-tag {
+  background-color: #000000;
+  color: white;
+  border-radius: 8px;
+  padding: 4px;
+}
+
 .film-tag {
   background-color: #EEEEEE;
   border-radius: 8px;
@@ -111,6 +124,30 @@ body {
 
 .happy-tag {
   background-color: #FF80AB;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.saturate-tag {
+  background-color: #2979FF;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.rainy-tag {
+  background-color:  #B3E5FC;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.cloudy-tag {
+  background-color:  white;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.street-tag {
+  background-color:  #FFF9C4;
   border-radius: 8px;
   padding: 4px;
 }

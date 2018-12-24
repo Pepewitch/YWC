@@ -195,10 +195,10 @@ const photoList: DetailPhoto[] = [
     id: '12',
     extension: 'jpg',
     photographer: photographer['Chim'],
-    tone: ['cool', 'contrast', 'cool'],
+    tone: ['cool', 'contrast', 'film'],
     time: 'night',
     type: 'Portrait',
-    mood: ['happy'],
+    mood: ['sad', 'lonely'],
     setting: {
       f: '1.8',
       focal: '55mm',
@@ -274,30 +274,40 @@ export class DetailPhotoService {
     const photo = photoList.find(e => e.id === photoId);
     return photo;
   }
-  getPhotoByFilter(filter: string) {
-    if (filter.length === 0) {
+  getPhotoByFilter(filter) {
+    let l = 0;
+    for (const key in filter) {
+      if (filter.hasOwnProperty(key)) {
+        const element = filter[key];
+        l += element.length;
+      }
+    }
+    if (l === 0) {
       return photoList;
     }
     const out = [];
     for (const i of photoList) {
       let check = false;
-      if (filter.includes(i.time)) {
+      if (filter.time.includes(i.time)) {
         check = true;
       }
       for (const mood of i.mood) {
-        if (filter.includes(mood)) {
+        if (filter.mood.includes(mood)) {
           check = true;
         }
       }
       for (const tone of i.tone) {
-        if (filter.includes(tone)) {
+        if (filter.tone.includes(tone)) {
           check = true;
         }
       }
       for (const type of i.type) {
-        if (filter.includes(type)) {
+        if (filter.type.includes(type)) {
           check = true;
         }
+      }
+      if (check) {
+        out.push(i);
       }
     }
     return out;
