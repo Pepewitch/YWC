@@ -14,6 +14,7 @@ import { NavigationSidenavContentComponent } from './components/navigation-bar/n
 import { NavigationSidenavItemComponent } from './components/navigation-bar/navigation-sidenav-item/navigation-sidenav-item.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { DetailPhotoComponent } from './views/detail-photo/detail-photo.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
     NavigationMainContentComponent,
     NavigationSidenavContentComponent,
     NavigationSidenavItemComponent,
+    DetailPhotoComponent,
   ],
   entryComponents: [
   ],

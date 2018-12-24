@@ -4,7 +4,7 @@
 @import './app/components/header/header.component.scss';
 @import './app/components/navigation-bar/navigation-bar.component.scss';
 @import './app/components/navigation-bar/navigation-sidenav-item/navigation-sidenav-item.component.scss';
-@import 'node_modules/bulma/bulma.sass';
+// @import 'node_modules/bulma/bulma.sass';
 
 // always include only once per project
 @include mat-core();
@@ -77,4 +77,10 @@ body {
 .flex-row-nowrap {
     display: flex;
     flex-flow: row nowrap;
+}
+
+.profile {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
 }
