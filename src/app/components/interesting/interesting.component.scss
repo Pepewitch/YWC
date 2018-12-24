@@ -1,0 +1,27 @@
+.container{
+    margin: 10px;
+    padding-top: 125px;
+    flex-flow: column nowrap;
+}
+.layout-image{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+// .image{
+//     position: relative;  
+// }
+.onright{
+    position: absolute;
+    display: inline;
+    right: 0px;
+    // z-index: 1
+}
+.onbuttom{
+    position: absolute;
+    display: inline;
+    bottom: 0;
+    left:  0;
+    // z-index: 1
+}
