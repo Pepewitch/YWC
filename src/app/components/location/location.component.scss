@@ -1,0 +1,26 @@
+.container{
+ display: flex;
+ flex-flow: column wrap;
+ justify-content: center
+}
+.layout-location{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center
+}
+.container-img{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center
+}
+.layout-img{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5px
+}
+.layou-label{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px
+}

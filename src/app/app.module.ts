@@ -14,6 +14,7 @@ import { NavigationSidenavContentComponent } from './components/navigation-bar/n
 import { NavigationSidenavItemComponent } from './components/navigation-bar/navigation-sidenav-item/navigation-sidenav-item.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { LocationComponent } from './components/location/location.component';
 import { DetailPhotoComponent } from './views/detail-photo/detail-photo.component';
 import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.component';
 
@@ -26,6 +27,7 @@ import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.
     NavigationMainContentComponent,
     NavigationSidenavContentComponent,
     NavigationSidenavItemComponent,
+    LocationComponent,
     DetailPhotoComponent,
     FilterDialogComponent,
   ],

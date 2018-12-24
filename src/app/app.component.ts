@@ -33,6 +33,10 @@ export class AppComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl('assets/icons/baseline-settings-20px.svg'),
     );
     iconRegistry.addSvgIcon(
+      'location',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/location.svg'),
+      );
+    iconRegistry.addSvgIcon(
       'eye',
       sanitizer.bypassSecurityTrustResourceUrl('assets/icons/baseline-remove_red_eye-24px.svg'),
     );
