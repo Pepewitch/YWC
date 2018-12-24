@@ -47,68 +47,61 @@ $list: (
     );
   }
 }
+.upper-main-container {
+  justify-content: center;
+  background: linear-gradient(#052966, #97cadb);
+}
 body {
   margin: 0;
   min-height: 100vh;
   box-sizing: border-box;
 }
-
 // $config: mat-typography-config();
 * {
   // font-family: mat-font-family($config);
   font-family: 'Kanit', sans-serif;
 }
-
 .flex-col-wrap {
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
 }
-
 .flex-col-nowrap {
-    display: flex;
-    flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 }
-
 .flex-row-wrap {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
-
 .flex-row-nowrap {
-    display: flex;
-    flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
 }
-
 .profile {
   width: 40px;
   height: auto;
   border-radius: 50%;
 }
-
 .warm-tag {
-  background-color: #FFF59D;
+  background-color: #fff59d;
   border-radius: 8px;
   padding: 4px;
 }
-
 .cool-tag {
-  background-color: #80DEEA;
+  background-color: #80deea;
   border-radius: 8px;
   padding: 4px;
 }
-
 .lonely-tag {
-  background-color: #9FA8DA;
+  background-color: #9fa8da;
   border-radius: 8px;
   padding: 4px;
 }
-
 .sad-tag {
-  background-color: #E57373;
+  background-color: #e57373;
   border-radius: 8px;
   padding: 4px;
 }
-
 .contrast-tag {
   background-color: #000000;
   color: white;
@@ -117,46 +110,39 @@ body {
 }
 
 .film-tag {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   border-radius: 8px;
   padding: 4px;
 }
-
 .happy-tag {
-  background-color: #FF80AB;
+  background-color: #ff80ab;
   border-radius: 8px;
   padding: 4px;
 }
-
 .saturate-tag {
-  background-color: #2979FF;
+  background-color: #2979ff;
   border-radius: 8px;
   padding: 4px;
 }
-
 .rainy-tag {
-  background-color:  #B3E5FC;
+  background-color: #b3e5fc;
   border-radius: 8px;
   padding: 4px;
 }
-
 .cloudy-tag {
-  background-color:  white;
+  background-color: white;
   border-radius: 8px;
   padding: 4px;
 }
-
 .main-container {
   max-width: 1024px;
   width: 100%;
 }
-
 .street-tag {
-  background-color:  #FFF9C4;
+  background-color: #fff9c4;
   border-radius: 8px;
   padding: 4px;
 }
-
 .full-width-dialog {
   max-width: 80vw !important;
   overflow: auto;

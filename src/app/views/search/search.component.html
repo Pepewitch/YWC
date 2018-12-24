@@ -1,53 +1,65 @@
-<div class="flex-col-nowrap" style="align-items: center;">
-  <table>
-    <tr *ngIf="loc">
-      <td><label class="head">สถานที่่ : </label></td>
-      <td>
-        <label> {{ loc }} </label>
-      </td>
-    </tr>
-    <tr *ngIf="type.length > 0">
-      <td><label class="head">ประเภท : </label></td>
-      <td>
-        <label *ngFor="let ty of type; last as isLast">
-          {{ ty }}<span *ngIf="!isLast">,</span>
-        </label>
-      </td>
-    </tr>
-    <tr *ngIf="time.length > 0">
-      <td><label class="head">เวลา : </label></td>
-      <td>
-        <label *ngFor="let ty of time; last as isLast">
-          {{ ty }}<span *ngIf="!isLast">,</span>
-        </label>
-      </td>
-    </tr>
-    <tr *ngIf="camera">
-      <td><label class="head">กล้อง : </label></td>
-      <td>
-        <label> {{ camera }}<span *ngIf="!isLast">,</span> </label>
-      </td>
-    </tr>
-    <tr *ngIf="mood.length > 0">
-      <td><label class="head">MOOD : </label></td>
-      <td>
-        <label *ngFor="let ty of mood; last as isLast">
-          {{ ty }}<span *ngIf="!isLast">,</span>
-        </label>
-      </td>
-    </tr>
-    <tr *ngIf="tone.length > 0">
-      <td><label class="head">TONE : </label></td>
-      <td>
-        <label *ngFor="let ty of tone; last as isLast">
-          {{ ty }}<span *ngIf="!isLast">,</span>
-        </label>
-      </td>
-    </tr>
-  </table>
-</div>
-<div class="flex-row-wrap">
-  <div class="each-image" *ngFor="let photo of images" style="cursor: pointer;" (click)="toDetail(photo)">
-    <img [src]="'/assets/images/photo/' + photo.id + '.' + photo.extension" class="image">
+<div class="flex-row-nowrap" style="justify-content: center;">
+  <div class="main-container">
+    <div class="flex-col-nowrap" style="align-items: center;">
+      <table>
+        <tr *ngIf="loc">
+          <td><label class="head">สถานที่่ : </label></td>
+          <td>
+            <label> {{ loc }} </label>
+          </td>
+        </tr>
+        <tr *ngIf="type.length > 0">
+          <td><label class="head">ประเภท : </label></td>
+          <td>
+            <label *ngFor="let ty of type; last as isLast">
+              {{ ty }}<span *ngIf="!isLast">,</span>
+            </label>
+          </td>
+        </tr>
+        <tr *ngIf="time.length > 0">
+          <td><label class="head">เวลา : </label></td>
+          <td>
+            <label *ngFor="let ty of time; last as isLast">
+              {{ ty }}<span *ngIf="!isLast">,</span>
+            </label>
+          </td>
+        </tr>
+        <tr *ngIf="camera">
+          <td><label class="head">กล้อง : </label></td>
+          <td>
+            <label> {{ camera }}<span *ngIf="!isLast">,</span> </label>
+          </td>
+        </tr>
+        <tr *ngIf="mood.length > 0">
+          <td><label class="head">MOOD : </label></td>
+          <td>
+            <label *ngFor="let ty of mood; last as isLast">
+              {{ ty }}<span *ngIf="!isLast">,</span>
+            </label>
+          </td>
+        </tr>
+        <tr *ngIf="tone.length > 0">
+          <td><label class="head">TONE : </label></td>
+          <td>
+            <label *ngFor="let ty of tone; last as isLast">
+              {{ ty }}<span *ngIf="!isLast">,</span>
+            </label>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-row-wrap">
+      <div
+        class="each-image"
+        *ngFor="let photo of images"
+        style="cursor: pointer;"
+        (click)="toDetail(photo)"
+      >
+        <img
+          [src]="'/assets/images/photo/' + photo.id + '.' + photo.extension"
+          class="image"
+        />
+      </div>
+    </div>
   </div>
 </div>

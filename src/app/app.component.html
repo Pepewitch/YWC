@@ -1,8 +1,8 @@
 <app-navigation-bar>
   <ng-template #header>
     <div class="flex-row-nowrap" style="align-items: center;">
-      <img src="/assets/images/logo.jpg" class="logo"/>
-      <label style="margin-left: 8px;">PhotoWay</label>
+      <img src="/assets/images/logo.jpg" class="logo" />
+      <label style="margin-left: 8px;">FOTOWay</label>
     </div>
     <img class="profile" src="/assets/images/profile.jpg" />
   </ng-template>
@@ -16,10 +16,6 @@
     </div>
   </app-navigation-sidenav-content>
   <app-navigation-main-content>
-    <div class="flex-row-nowrap" style="justify-content: center; background: linear-gradient(#052966,#97cadb);" >
-      <div class="main-container">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </app-navigation-main-content>
 </app-navigation-bar>
