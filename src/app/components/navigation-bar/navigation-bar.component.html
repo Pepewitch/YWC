@@ -5,7 +5,7 @@
         <mat-icon svgIcon="menu"></mat-icon>
       </button>
     </div>
-    <ng-content select="app-navigation-header-content"></ng-content>
+    <ng-container *ngTemplateOutlet="header"></ng-container>
   </div>
 </app-header>
 <mat-sidenav-container>

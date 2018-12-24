@@ -1,7 +1,8 @@
 <app-navigation-bar>
-  <app-navigation-header-content>
-    <span style="font-weight: 600;">HEADER</span>
-  </app-navigation-header-content>
+  <ng-template #header>
+    <span>NAME</span>
+    <span>LOGO</span>
+  </ng-template>
   <app-navigation-sidenav-content>
     <div class="sidenav-container">
       <ng-container *ngFor="let item of sidenav_items">
