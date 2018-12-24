@@ -1,9 +1,101 @@
-<h1 mat-dialog-title>Hello Dialog!</h1>
-<div mat-dialog-content>
-  <div class="flex-col-nowrap">
+<div class="flex-col-nowrap container">
+  <div class="flex-row-nowrap header-container">
+    <mat-icon svgIcon="location"></mat-icon>
+    ค้นหาสถานที่ต้องการ
   </div>
-</div>
-<div mat-dialog-actions class="bottom-container">
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button color="primary" (click)="submit()" cdkFocusInitial>Ok</button>
+  <mat-divider style="align-self: stretch"></mat-divider>
+  <div class="body-container">
+    <div class="flex-row-nowrap" style="justify-content: flex-end">
+      <mat-checkbox>เลือกทั้งหมด</mat-checkbox>
+    </div>
+    <table>
+      <tr>
+        <td><label class="topic">ประเภท</label></td>
+        <td>
+          <div class="flex-row-wrap">
+            <div class="relative-container">
+              <div class="icon" *ngIf="landscape">
+                <mat-icon
+                  svgIcon="checked"
+                  style="transform: scale(0.8)"
+                ></mat-icon>
+              </div>
+              <button
+                mat-raised-button
+                style="width: 100%"
+                (click)="landscape = !landscape"
+              >
+                วิวบรรยากาศ
+              </button>
+            </div>
+            <div class="relative-container">
+              <div class="icon" *ngIf="portrait">
+                <mat-icon
+                  svgIcon="checked"
+                  style="transform: scale(0.8)"
+                ></mat-icon>
+              </div>
+              <button
+                mat-raised-button
+                style="width: 100%"
+                (click)="portrait = !portrait"
+              >
+                ภาพคน
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><label class="topic">ช่วงเวลา</label></td>
+        <td>
+          <div class="flex-row-wrap">
+            <div class="relative-container">
+              <div class="icon" *ngIf="day">
+                <mat-icon
+                  svgIcon="checked"
+                  style="transform: scale(0.8)"
+                ></mat-icon>
+              </div>
+              <button
+                mat-raised-button
+                style="width: 100%"
+                (click)="day = !day"
+              >
+                กลางวัน
+              </button>
+            </div>
+            <div class="relative-container">
+              <div class="icon" *ngIf="night">
+                <mat-icon
+                  svgIcon="checked"
+                  style="transform: scale(0.8)"
+                ></mat-icon>
+              </div>
+              <button
+                mat-raised-button
+                style="width: 100%"
+                (click)="night = !night"
+              >
+                กลางคืน
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><label class="topic">กล้อง</label></td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-select>
+              <mat-option [value]="'canon'"> canon </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <label class="topic">MOOD</label>
+    <mat-divider></mat-divider>
+  </div>
 </div>

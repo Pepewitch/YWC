@@ -1,4 +1,34 @@
 .bottom-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  justify-content: center;
+  padding: 24px;
+}
+
+.header-container {
+  padding-bottom: 16px;
+}
+
+.body-container {
+  padding-top: 16px;
+}
+
+.relative-container {
+  position: relative;
+  padding: 4px;
+  min-width: 120px;
+}
+
+.icon {
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.topic {
+  flex-basis: 160px;
+  font-weight: 600;
 }
