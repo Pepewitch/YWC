@@ -9,19 +9,19 @@
     justify-content: space-between;
     margin-bottom: 15px;
 }
-// .image{
-//     position: relative;  
-// }
+.flex_spacebeetween{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between
+}
 .onright{
     position: absolute;
     display: inline;
     right: 0px;
-    // z-index: 1
 }
 .onbuttom{
     position: absolute;
     display: inline;
     bottom: 0;
     left:  0;
-    // z-index: 1
 }
