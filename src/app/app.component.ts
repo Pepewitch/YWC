@@ -44,6 +44,10 @@ export class AppComponent implements OnInit {
       'like',
       sanitizer.bypassSecurityTrustResourceUrl('assets/icons/baseline-thumb_up_alt-24px.svg'),
     );
+    iconRegistry.addSvgIcon(
+      'checked',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/checked.svg'),
+    );
   }
   ngOnInit() {
     this.sidenav_items = this.navigation.getSidenavItems();
