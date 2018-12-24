@@ -1,29 +1,67 @@
 <div class="flex-col-nowrap" style="align-items: center">
-  <div class="flex-col-nowrap container">
-    <div class="flex-row-nowrap" style="justify-content: flex-end;align-self: stretch;">
+  <div class="flex-col-nowrap container" *ngIf="!onRequest">
+    <div
+      class="flex-row-nowrap"
+      style="justify-content: flex-end;align-self: stretch;"
+    >
       <div class="icon_container flex-row-nowrap">
-        <mat-icon svgIcon="eye"></mat-icon> 292
+        <mat-icon svgIcon="eye"></mat-icon> {{ photo.view }}
       </div>
       <div class="icon_container flex-row-nowrap">
-        <mat-icon svgIcon="like"></mat-icon> 28
+        <mat-icon svgIcon="like"></mat-icon> {{ photo.like }}
       </div>
     </div>
-    <img src="/assets/images/baifern.jpg" class="main_image">
-    <div class="flex-row-nowrap profile-container" style="justify-content: space-between;">
+    <img
+      [src]="'/assets/images/photo/' + photo.id + '.' + photo.extension"
+      class="main_image"
+    />
+    <div
+      class="flex-row-nowrap profile-container"
+      style="justify-content: space-between;"
+    >
       <div class="flex-row-nowrap name-container">
-        <img src="/assets/images/photographer.jpg" class="profile">
+        <img src="/assets/images/photographer.jpg" class="profile" />
         <div class="flex-col-nowrap" style="margin-left:4px;">
           <span class="main-name">
-            Kulachet Cheosakul
+            {{ photographer.firstname }} {{ photographer.lastname }}
           </span>
-          <span class="sub-name">
-            ILoveToGo.com
+          <span class="sub-name" *ngIf="photographer && photographer.from">
+            {{ photographer.from }}
           </span>
         </div>
       </div>
-      <div>
-        WARM
+      <div class="flex-row-wrap">
+        <div *ngFor="let tag of tags" [class]="tag + '-tag'">
+          {{ tag | uppercase }}
+        </div>
       </div>
+    </div>
+    <mat-divider style="align-self: stretch"></mat-divider>
+    <!-- <button mat-raised-button>SHOW DETAIL</button> -->
+    <div class="flex-col-nowrap detail-container">
+      <span class="header-detail">Detail</span>
+      <table class="detail-table">
+        <colgroup>
+          <col style="width:50%" />
+          <col style="width:50%" />
+        </colgroup>
+        <tr>
+          <td align="right">Shutter speed :</td>
+          <td align="left">{{ setting.ss }}</td>
+        </tr>
+        <tr>
+          <td align="right">Aperture :</td>
+          <td align="left">{{ setting.f }}</td>
+        </tr>
+        <tr>
+          <td align="right">ISO :</td>
+          <td align="left">{{ setting.iso }}</td>
+        </tr>
+        <tr>
+          <td align="right">Whitebalance :</td>
+          <td align="left">{{ setting.wb }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

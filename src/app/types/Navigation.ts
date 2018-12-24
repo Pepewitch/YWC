@@ -3,7 +3,3 @@ export interface SidenavItem {
   link: String;
   pathMatch: boolean;
 }
-
-export interface DetailPhotoParams {
-  photo: string;
-}

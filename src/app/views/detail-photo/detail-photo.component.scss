@@ -39,3 +39,18 @@
         color: #333333;
     }
  }
+
+ .detail-container {
+     padding: 8px;
+     justify-content: flex-start;
+     align-self: stretch;
+     .header-detail {
+         font-weight: 600;
+         text-decoration: underline;
+         font-size: 1.2em;
+     }
+ }
+
+ .detail-table {
+     table-layout: fixed
+ }
