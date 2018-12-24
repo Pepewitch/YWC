@@ -11,8 +11,13 @@ export class NavigationBarService {
       link: '/',
       pathMatch: true
     },
+    {
+      name: 'Detail',
+      link: '/detail/1',
+      pathMatch: false
+    }
   ];
-  constructor() {}
+  constructor() { }
   getSidenavItems() {
     return this.sidenav_items;
   }

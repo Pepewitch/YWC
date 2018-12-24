@@ -36,6 +36,14 @@ export class AppComponent implements OnInit {
       'location',
       sanitizer.bypassSecurityTrustResourceUrl('assets/icons/location.svg'),
       );
+    iconRegistry.addSvgIcon(
+      'eye',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/baseline-remove_red_eye-24px.svg'),
+    );
+    iconRegistry.addSvgIcon(
+      'like',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/baseline-thumb_up_alt-24px.svg'),
+    );
   }
   ngOnInit() {
     this.sidenav_items = this.navigation.getSidenavItems();
