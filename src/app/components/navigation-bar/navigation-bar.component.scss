@@ -1,0 +1,32 @@
+@mixin navigation-bar-component($theme, $options) {
+  $sidenavWidth: map-get(
+    $map: $options,
+    $key: sidenavWidth,
+  );
+  $headerHeight: map-get(
+    $map: $options,
+    $key: headerHeight,
+  );
+  .navigation-bar {
+    &-header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    &-content-container {
+      margin-top: $headerHeight;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    &-sidenav-container {
+      margin-top: $headerHeight;
+      width: $sidenavWidth;
+    }
+    &-sidenav-content-container {
+      position: fixed;
+      width: 100%;
+      max-width: $sidenavWidth;
+      box-sizing: border-box;
+    }
+  }
+}
