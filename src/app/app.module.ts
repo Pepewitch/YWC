@@ -17,6 +17,8 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { LocationComponent } from './components/location/location.component';
 import { DetailPhotoComponent } from './views/detail-photo/detail-photo.component';
 import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.component';
+import { InterestingComponent } from './components/interesting/interesting.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FilterDialogComponent } from './components/filter-dialog/filter-dialog.
     LocationComponent,
     DetailPhotoComponent,
     FilterDialogComponent,
+    InterestingComponent,
+    FooterComponent,
   ],
   entryComponents: [
     FilterDialogComponent
